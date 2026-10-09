@@ -3,9 +3,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const prefersReducedMotion = () =>
-  typeof window !== 'undefined' &&
-  window.matchMedia('(prefers-reduced-motion: reduce)').matches
+// Re-exported from its own module so the ~15 components that gate their
+// timelines on it don't have to know the flag also honours a dev override.
+export { prefersReducedMotion } from './motion'
 
 /**
  * Viewport breakpoints. The pinned horizontal track and the large display type

@@ -3,6 +3,14 @@
  * Extracted verbatim from the previous build — edit here, never in components.
  */
 
+/**
+ * Vite rewrites the URLs it can see in index.html and CSS, but not string
+ * literals inside a component. Anything served out of /public therefore has to
+ * be built off BASE_URL, so it stays correct whether the site is served from the
+ * domain root or from a GitHub Pages /<repo>/ sub-path.
+ */
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 export const identity = {
   first: 'DEVANSH',
   last: 'YADAV',
@@ -14,9 +22,9 @@ export const identity = {
   email: 'devanshsantoshyadav@gmail.com',
   github: 'https://github.com/Yadav-Devansh',
   linkedin: 'https://www.linkedin.com/in/devansh-yadav-8334a728b',
-  resumeHref: '/resume.pdf',
+  resumeHref: asset('resume.pdf'),
   resumeFilename: 'Devansh_Yadav_Resume.pdf',
-  portrait: '/media/portrait.jpg',
+  portrait: asset('media/portrait.jpg'),
   year: '2026',
   tagline: 'Developer, builder, problem solver.',
 } as const
