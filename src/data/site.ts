@@ -20,7 +20,7 @@ export const identity = {
   institution: 'Vidyalankar Institute of Technology',
   rollNo: '24102A0038',
   email: 'devanshsantoshyadav@gmail.com',
-  github: 'https://github.com/Yadav-Devansh',
+  github: 'https://github.com/bloodnbred',
   linkedin: 'https://www.linkedin.com/in/devansh-yadav-8334a728b',
   resumeHref: asset('resume.pdf'),
   resumeFilename: 'Devansh_Yadav_Resume.pdf',
