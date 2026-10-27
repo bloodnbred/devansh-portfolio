@@ -24,7 +24,9 @@ export const identity = {
   linkedin: 'https://www.linkedin.com/in/devansh-yadav-8334a728b',
   resumeHref: asset('resume.pdf'),
   resumeFilename: 'Devansh_Yadav_Resume.pdf',
-  portrait: asset('media/portrait.jpg'),
+  // Dated filename on purpose: /media is cached for 30 days on Vercel and 10
+  // minutes on Pages, so a new URL is the only reliable way to ship a new photo.
+  portrait: asset('media/portrait-2026.jpg'),
   year: '2026',
   tagline: 'Developer, builder, problem solver.',
 } as const

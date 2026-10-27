@@ -114,8 +114,8 @@ export function Hero({ ready }: { ready: boolean }) {
               data-hero-img
               src={identity.portrait}
               alt={identity.full}
-              width={900}
-              height={1125}
+              width={1599}
+              height={1199}
               className="duotone size-full object-cover object-top contrast-125"
               fetchPriority="high"
             />
